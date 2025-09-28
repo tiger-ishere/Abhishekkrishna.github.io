@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Krishna - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #111;
+      position: sticky;
+      top: 0;
+    }
+    header h1 {
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #29ff54;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+    }
+    .search-box input {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      margin-left: 15px;
+    }
+    .search-box button {
+      padding: 6px 10px;
+      margin-left: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #29ff54;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-box button:hover {
+      background: #22cc44;
+    }
+    .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      padding: 0 10%;
+    }
+    .text {
+      flex: 1;
+    }
+    .text h1 {
+      font-size: 50px;
+    }
+    .text p {
+      max-width: 500px;
+      line-height: 1.5;
+    }
+    .photo {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .photo img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abhishek Krishna</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchPage()">Go</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="home">
+    <div class="text">
+      <h1>I'M <span style="color:#29ff54;">Abhishek Krishna</span></h1>
+      <p>CSE student at Government Engineering College Wayanad, passionate about full-stack development, blockchain, and AI tools. Strong foundation in programming, problem-solving, and exploring new technologies with a focus on continuous learning and innovation.</p>
+    </div>
+    <div class="photo">
+      <img src="profile.jpg" alt="Profile Photo">
+    </div>
+  </section>
+
+  <script>
+    function searchPage() {
+      let query = document.getElementById("searchInput").value.toLowerCase().trim();
+      if (query === "home" || query === "index") {
+        window.location.href = "index.html";
+      } else if (query === "work") {
+        window.location.href = "work.html";
+      } else if (query === "contact") {
+        window.location.href = "contact.html";
+      } else {
+        alert("Page not found! Try 'home', 'work', or 'contact'.");
+      }
+    }
+  </script>
+</body>
+</html>
